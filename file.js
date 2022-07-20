@@ -16,57 +16,42 @@ function createInvoice(invoice, path) {
 
 function generateHeader(doc) {
   doc
-    .image("logo.png", 50, 45, { width: 50 })
+    .image("logo.png", 20, 35, { width: 130, height: 100})
     .fillColor("#444444")
     .fontSize(20)
-    .text("BOTOFFICE.LTD.", 110, 57)
+    .text("BOTOFFICE.LTD.", 160, 37)
     .fontSize(10)
-    .text("7, SAHEED OLA ADELEKAN STREET", 200, 65, { align: "right" })
-    .text("LEKKI PHASE 1", 200, 80, { align: "right" })
+    .text("DATE:\n July 18, 2022.", 200, 40, { align: "right" })
+    .text("INVOICE:\n INVO00066958", 200, 70, { align: "right" })
+    .text("DUE:\n on Receipt ", 200, 100, { align: "right" })
+    .text("BALANCE DUE:\n On Receipt...", 200, 130, { align: "right"})
     .moveDown();
 }
 
 function generateCustomerInformation(doc, invoice) {
   doc
     .fillColor("#444444")
+    .fontSize(10)
+    .text("bills to: .", 50, 200)
     .fontSize(20)
-    .text("Invoice", 50, 160);
+    .text("UBA ZAMBIA LIMITED", 50, 220)
+    .fontSize(10)
+    .text("Stand 22768 , Thabo Mbeki Road Lusaka Zambia")
+
 
   generateHr(doc, 185);
 
-  const customerInformationTop = 200;
+  const customerInformationTop = (200,100)
 
   doc
     .fontSize(10)
-    .text("Invoice Number:", 50, customerInformationTop)
-    .font("Helvetica-Bold")
-    .text(invoice.invoice_nr, 150, customerInformationTop)
-    .font("Helvetica")
-    .text("Invoice Date:", 50, customerInformationTop + 15)
-    .text(formatDate(new Date()), 150, customerInformationTop + 15)
-    .text("Balance Due:", 50, customerInformationTop + 30)
-    .text(
-      formatCurrency(invoice.subtotal - invoice.paid),
-      150,
-      customerInformationTop + 30
-    )
-
-    .font("Helvetica-Bold")
-    .text(invoice.shipping.name, 300, customerInformationTop)
-    .font("Helvetica")
-    .text(invoice.shipping.address, 300, customerInformationTop + 15)
-    .text(
-      invoice.shipping.city +
-        ", " +
-        invoice.shipping.state +
-        ", " +
-        invoice.shipping.country,
-      300,
-      customerInformationTop + 30
-    )
-    .moveDown();
-
-  generateHr(doc, 252);
+    .text("BUSINESS NUMBER RC3457789", 160,57)
+    .text("Lekki Phase 1", 160,117)
+    .text("7, Saheed Ola Adelekan Close", 160, 77)
+    .text("+2349017164283", 160 , 137)
+    .text("info@botoffice.com", 160, 97)
+    
+    
 }
 
 function generateInvoiceTable(doc, invoice) {
@@ -77,7 +62,6 @@ function generateInvoiceTable(doc, invoice) {
   generateTableRow(
     doc,
     invoiceTableTop,
-    "Item",
     "Description",
     "Unit Cost",
     "Quantity",
@@ -92,7 +76,6 @@ function generateInvoiceTable(doc, invoice) {
     generateTableRow(
       doc,
       position,
-      item.item,
       item.description,
       formatCurrency(item.amount / item.quantity),
       item.quantity,
@@ -140,13 +123,14 @@ function generateInvoiceTable(doc, invoice) {
 
 function generateFooter(doc) {
   doc
+    .font("Helvetica-Bold")
+    .text("DETAILS ON ACCOUNT.", 50 , 480, {align: "left"})
     .fontSize(10)
-    .text(
-      "Payment is due within 15 days. Thank you for your business.",
-      50,
-      780,
-      { align: "center", width: 500 }
-    );
+    .text("ACCOUNT NUMBER: 2179757798", 50, 530 ,{align: "left"})
+    .text("ACCOUNT NAME: BOTOFFICE LIMITED", 50, 550,{align: "left"})
+    .text("TAX IDENTIFICATION NUMBER (TIN): 20674757-0001", 50, 570, {align: "left"});
+
+    
 }
 
 function generateTableRow(
