@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Website</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Assignment Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="assignment.html">Assignment</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Home</h2>
+    <img src="images/nonso.png" alt="Your Picture">
+    <p>Welcome! This is my personal website for submitting the assignment.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ejiofor Nonso Olusegun. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Website</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Assignment Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="assignment.html">Assignment</a>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Phone: <strong>08034609505</strong></p>
+    <p>Email: <strong>nonsoejiofor070@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ejiofor Nonso Olusegun. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Website</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Assignment Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="assignment.html">Assignment</a>
+    </nav>
+  </header>
+
+  <section id="assignment">
+    <h2>Assignment</h2>
+    <ul>
+      <li><strong>Machine Learning:</strong> Machine learning is a subset of artificial intelligence where systems learn from data without explicit programming.</li>
+      <li><strong>Artificial Intelligence:</strong> AI refers to machines designed to simulate human intelligence, including learning and problem-solving.</li>
+      <li><strong>Supervised Learning:</strong> A machine learning model trained on labeled data to predict outcomes.</li>
+      <li><strong>Unsupervised Learning:</strong> A machine learning model that finds hidden patterns in unlabeled data.</li>
+      <li><strong>Deep Learning:</strong> A type of machine learning using neural networks to process large, complex data sets.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Ejiofor Nonso Olusegun. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Website</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Assignment Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="assignment.html">Assignment</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Matric Number: <strong>F/HD/23/3210012</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ejiofor Nonso Olusegun. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+  }
+ 
+  header {
+    background: #0073e6;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+ 
+  header h1 {
+    margin-bottom: 0.5rem;
+  }
+ 
+  nav {
+    margin-top: 1rem;
+  }
+ 
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+  }
+ 
+  nav a:hover {
+    text-decoration: underline;
+  }
+ 
+  section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+ 
+  section h2 {
+    margin-bottom: 1rem;
+    color: #0073e6;
+  }
+ 
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+ 
+  footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #333;
+    color: #fff;
+  }
+ 
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+ 
+    nav a {
+      margin: 0.5rem 0;
+    }
+ 
+    section {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+ 
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+  }
+ 
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+ 
+    nav a {
+      font-size: 0.9rem;
+    }
+ 
+    section {
+      padding: 1rem;
+    }
+ 
+    footer {
+      font-size: 0.9rem;
+    }
+  }
